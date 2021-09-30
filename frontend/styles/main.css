@@ -1,0 +1,38 @@
+:root {
+    --very_dark: hsl(217, 19%, 35%);
+    --desaturated_dark: hsl(214, 17%, 51%);
+    --grayish_blue: hsl(212, 23%, 69%);
+    --light_grayish: hsl(210, 46%, 95%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light_grayish);
+}
+
+.card {
+    background-color: #fff;
+    width: 330px;
+    height: 600px;
+    margin: 2rem auto;    
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card_top {
+    height: 220px;
+    overflow: hidden;
+}
+
+.card_top img{
+    width: 100%;
+}
+
+.card_content {
+    padding: 2rem;
+}
