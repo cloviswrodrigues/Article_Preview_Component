@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="./styles/main.css">
+    
     <title>Article Preview Component</title>
 </head>
 <body>
@@ -24,16 +25,25 @@
                 something was missing? perhaps it felt
                 slightly bare and uninviting. I've got some
                 simple tips to help you make any room feel complete.
-            </p>
+            </p>           
+        </div>
+        <div class="card_bottom">
             <div class="card_profile">
-                <img src="./assets/avatar-michelle.jpg" alt="">
+                <img id="photo" src="./assets/avatar-michelle.jpg" alt="">
                 <div class="profile">
-                    <p>Michelle Appleton</p>
+                    <h2>Michelle Appleton</h2>
                     <p>28 Jun 2020</p>
-                </div>
-                <img src="./assets/icon-share.svg" alt="">
+                </div>                
             </div>
+            <div class="share">
+                <h3>SHARE</h3>
+                <img id="photo" src="./assets/icon-facebook.svg" alt="">
+                <img id="photo" src="./assets/icon-twitter.svg" alt="">
+                <img id="photo" src="./assets/icon-pinterest.svg" alt="">                
+            </div>
+            <img class="icon_share active" src="./assets/icon-share.svg" alt="">
         </div>
     </div>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
