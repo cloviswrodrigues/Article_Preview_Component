@@ -1,7 +1,8 @@
 const icon = document.getElementById('icon_share');
+const share = 
 
-icon.addEventListener("click",function(){
-    console.log(e);
+icon.addEventListener("click", function(){
+    
 });
 
 console.log(icon);

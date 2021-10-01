@@ -24,10 +24,11 @@ body {
 .card {
     background-color: #fff;
     width: 330px;
-    height: 600px;
     margin: 2rem auto;    
     border-radius: 10px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .card_top {
@@ -44,7 +45,7 @@ body {
 }
 
 .card_content h1{
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 700;
 }
 
@@ -71,6 +72,8 @@ body {
 .card_bottom {
     position: relative;
     height: 75px;
+    background-color: var(--very_dark);
+    width: 100%;
 }
 
 .icon_share {
@@ -107,9 +110,7 @@ body {
     color: var(--grayish_blue);
 }
 
-.share {
-    background-color: var(--very_dark);
-    width: 100%;
+.share {    
     height: 100%;
     display: flex;
     align-items: center;
