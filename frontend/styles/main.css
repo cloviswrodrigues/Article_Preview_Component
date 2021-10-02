@@ -41,7 +41,7 @@ body {
 }
 
 .card_content {
-    padding: 2rem;
+    padding: 2rem 2rem .5rem;
 }
 
 .card_content h1{
@@ -57,10 +57,18 @@ body {
     font-weight: 500;
 }
 
+.card_bottom {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+}
+
 .card_profile {
+    margin-left: 2rem;
     display: none;
     align-items: center;
-    margin-top: 2.5rem;
 }
 
 .card_profile #photo {
@@ -69,29 +77,23 @@ body {
     border-radius: 50%;
 }
 
-.card_bottom {
-    position: relative;
-    height: 75px;
-    background-color: var(--very_dark);
-    width: 100%;
-}
-
 .icon_share {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background-color: var(--light_grayish);
-    z-index: 1;
     position: absolute;
     top: 0;
     left: auto;
     right: 0;
     bottom: 0;
     margin:auto 2rem;
+    padding: 0.6rem;
 }
 
 .active {
     background-color: var(--desaturated_dark);
+    color: #fff;
 }
 
 .profile {
@@ -112,8 +114,10 @@ body {
 
 .share {    
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
+    background-color: var(--desaturated_dark);
 }
 
 .share h3{
