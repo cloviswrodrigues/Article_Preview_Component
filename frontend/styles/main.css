@@ -81,7 +81,6 @@ body {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: var(--light_grayish);
     position: absolute;
     top: 0;
     left: auto;
@@ -116,7 +115,6 @@ body {
     align-items: center;
     background-color: var(--very_dark);
 }
-
 
 .share h3 {
     margin-left: 2rem;
