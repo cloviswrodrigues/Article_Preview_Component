@@ -7,7 +7,7 @@
     --light_grayish: hsl(210, 46%, 95%);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -26,9 +26,9 @@ body {
     width: 330px;
     margin: 2rem auto;    
     border-radius: 10px;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .card_top {
@@ -41,6 +41,8 @@ body {
 }
 
 .card_content {
+    position: relative;
+    height: 330px;
     padding: 2rem 2rem 1rem;
 }
 
@@ -58,7 +60,9 @@ body {
 }
 
 .card_bottom {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     display: flex;
     align-items: center;
     height: 80px;
@@ -68,7 +72,9 @@ body {
 .card_profile {
     margin-left: 2rem;
     display: flex;
-    align-items: center;
+    align-items: center;    
+    position: absolute;
+    z-index: 0;
 }
 
 .card_profile #photo {
@@ -78,6 +84,7 @@ body {
 }
 
 .icon_share {
+    background-color: var(--light_grayish);
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -88,9 +95,8 @@ body {
     bottom: 0;
     margin:auto 2rem;
     padding: 0.6rem;
+    z-index: 2;
 }
-
-
 
 .profile {
     margin-left: 1rem;
@@ -114,6 +120,7 @@ body {
     display: flex;
     align-items: center;
     background-color: var(--very_dark);
+    z-index: 1;
 }
 
 .share h3 {
@@ -140,4 +147,98 @@ body {
 
 .none{
     display: none;
+}
+
+@media screen and (min-width: 610px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .card {
+        flex-direction: row;
+        width: 606px;   
+        height: 250px; 
+        margin: 0;
+        box-shadow: 1px 1px 50px rgba(0,0,0,0.1);
+        overflow: visible;
+    }
+
+    .card_top {
+        width: 246px;
+        height: 100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .card_top img {
+        height: 100%;
+        width: 300px;
+    }
+
+    .card_content {
+        height: 100%;
+        width: 360px;
+        margin: 0;        
+    }
+
+    .card_content p {
+        margin-top: .5rem;
+        font-size: .7rem;        
+        line-height: 1.1rem;
+    }
+
+    .card_bottom {
+        position: static;
+    }
+
+    .card_profile {
+        margin: 0;
+    }
+
+    .profile p {
+        margin-top: 0;
+    }
+
+    .share {
+        position: absolute;
+        top: 44%;
+        left: 55%;
+        z-index: 9;
+        height: 50px;
+        width: 220px;
+        padding: 1rem 1.4rem;
+        justify-content: space-evenly;
+        border-radius: 10px;
+        z-index: 1;
+        box-shadow: 0 5px 30px rgba(0,0,0,0.2);
+    }
+
+    .share h3 {
+        font-size: .7rem;
+        margin-left: 0;
+    }
+
+    .share img {
+        margin: 0 0 0 1rem;
+        z-index: 1;
+    }
+
+    .share::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: var(--very_dark);
+        transform: rotate(45deg);    
+        z-index: 0;
+    }
+
+    .icon_share {
+        top: auto;
+        bottom: auto;        
+    }
 }
