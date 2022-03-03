@@ -14,6 +14,9 @@
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
     background-color: var(--light_grayish);
     font-family: 'Manrope', sans-serif;    
     font-weight: 500;
@@ -24,7 +27,7 @@ body {
 .card {
     background-color: #fff;
     width: 330px;
-    margin: 2rem auto;    
+    margin: auto;    
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -96,6 +99,7 @@ body {
     margin:auto 2rem;
     padding: 0.6rem;
     z-index: 2;
+    cursor: pointer;
 }
 
 .profile {
@@ -212,7 +216,7 @@ body {
         padding: 1rem 1.4rem;
         justify-content: space-evenly;
         border-radius: 10px;
-        z-index: 1;
+        z-index: 9;
         box-shadow: 0 5px 30px rgba(0,0,0,0.2);
     }
 
@@ -221,11 +225,14 @@ body {
         margin-left: 0;
     }
 
-    .share img {
-        margin: 0 0 0 1rem;
+    .share a {
         z-index: 1;
     }
 
+    .share a img {
+        margin: 0 0 0 1rem;
+    }
+    
     .share::before{
         content: '';
         position: absolute;
